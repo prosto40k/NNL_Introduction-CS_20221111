@@ -1,21 +1,25 @@
 ﻿// С клавиатуры вводится целое число. Вывести третью цифру числа или сообщить, что её нет (Вывести: NO)
 System.Console.Write("Ввод числа:");
 int a=Convert.ToInt32(Console.ReadLine());
-int i=99,i1=999,i2=9999;
+int i=0;
+while (i!=a)
+{
+  i++;
+}
 
-if(a>i2)
+if(i>9999)
 {
   System.Console.WriteLine(a/100%10);
 }
   else
   {
-    if(a>i1)
+    if(i>999)
     {
         System.Console.WriteLine(a/10%10);
     }
     else
     {
-if(a>i)
+if(a>99)
 {
     System.Console.WriteLine(a%10);
 }
