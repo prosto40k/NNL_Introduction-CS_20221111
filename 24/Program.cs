@@ -6,8 +6,9 @@ int N=Convert.ToInt32(Console.ReadLine());
 while (i!=N+1)
 {
    sqr=i*i;
+   System.Console.WriteLine($"{i}^2 = {sqr}");
    i++;
-   System.Console.WriteLine(sqr);
+   
 }
 
 
