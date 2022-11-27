@@ -1,4 +1,4 @@
-﻿/Массив из случайных чисел
+﻿//Массив из случайных чисел
 
 
 int[] RandomIntArray(int size=10,int min=0,int max=100)
