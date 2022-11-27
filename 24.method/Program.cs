@@ -8,14 +8,14 @@ int While (int N)
 {
    sqr=i*i;
    i++;
+   System.Console.WriteLine(sqr);
 }
    return sqr;
-   
 }
 
 System.Console.WriteLine("Введите N");
 int N=Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine(While(N));
+While(N);
 /*
 1) Уберите int i из 3-й строчки, у вас по условиям задачи это типа константа, она объявляется на 
 5 строке внутри метода!
