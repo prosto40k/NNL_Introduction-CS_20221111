@@ -9,8 +9,8 @@ double Sum(int N)
     i++;
     x = x + 0.5;
 }
-System.Console.WriteLine(i);
-System.Console.WriteLine(x);
+System.Console.WriteLine($"i={i}");
+System.Console.WriteLine($"x={x}");
 sum = x * i;
 return sum;
 }
