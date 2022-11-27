@@ -13,3 +13,6 @@ switch(day)
     default:
         System.Console.WriteLine("не правильный ввод");
         break;   
+}
+
+//goto - нельзязя исп-ть(нарушает "вход-выход(а конкретнее выход))
