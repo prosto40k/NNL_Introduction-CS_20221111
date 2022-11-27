@@ -3,7 +3,7 @@
 //Подпрограмма
 int CountDigits(int Number)
 {
-    Number=Math.Abs(Number);
+    Number=Math.Abs(Number); // Math.Abs - число по модулю
     int count=0;
     if (Number==0) count=1;
     while (Number>0)

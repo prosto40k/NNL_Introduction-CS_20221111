@@ -1,20 +1,21 @@
 ﻿//24. Вывести на экран таблицу квадратов чисел от 1 до N
 
-int While (int sqr)
+int While (int N)
 {   
-    int N;
+    int sqr=0;
     int i=1;
     while (i!=N+1)
 {
    sqr=i*i;
    i++;
+}
    return sqr;
+   
 }
-}
-int sqr;
+
 System.Console.WriteLine("Введите N");
-int N=Convert.ToInt32(Console.ReadLine(While(N)));
-System.Console.WriteLine(While(sqr));
+int N=Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine(While(N));
 /*
 1) Уберите int i из 3-й строчки, у вас по условиям задачи это типа константа, она объявляется на 
 5 строке внутри метода!
