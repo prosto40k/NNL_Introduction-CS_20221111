@@ -14,13 +14,14 @@ System.Console.WriteLine(s);
 */
 
 //массивы - это объекты
+//
 int N=7;
 int[] t;//не присвоенное (null)
 t=new int[N];//создаем массив, то есть в t помещаем адрес массива
 int[] t2=new int[N];
 double s=0;
 //заполнить массив
-for(int i=0;i<t.Length;i++)
+for(int i=0;i<t.Length;i++)//Заполняем до тех пор пока не упремся в N,где N-размер массива.
     t[i]=Convert.ToInt32(Console.ReadLine());
 //обработать массив
 for(int i=0;i<t.Length;i++)    
