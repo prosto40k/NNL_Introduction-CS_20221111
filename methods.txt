@@ -1,0 +1,57 @@
+
+int[] RandomIntArray(int size=8,int min=0,int max=25)
+{
+    int[] a=new int[size];
+    Random random=new Random();
+    for(int i=0;i<size;i++)
+    a[i]=random.Next(min,max);
+    return a;
+}
+
+void Print(int[] a)
+{
+    for(int i=0;i<a.Length;i++)
+        System.Console.Write($"{a[i],5}");
+}
+
+int SumPositive(int[] a)
+{
+    int s=0;
+    foreach(int el in a)
+        if (el>0) s=s+el;
+    return s;
+}
+
+int SumNegative(int[] a)
+{
+    int s=0;
+    foreach(int el in a)
+        if (el<0) s=s+el;
+    return s;
+}
+
+int LinearSearch(int[] a,int find,int startIndex=0)
+{
+    int i=startIndex;
+    while(i<a.Length && a[i]!=find) i++;
+    if (i==a.Length)
+        return -1;
+    else
+        return i;
+}
+
+int Na2(int[] a)
+{
+    int n2=0;
+    foreach(int el in a)
+        if (el%2==0) n2++;
+    return n2;
+}
+
+int Na3(int[] a)
+{
+    int n3=0;
+    foreach(int el in a)
+        if (el%2!=0) n3++;
+    return n3;
+}
