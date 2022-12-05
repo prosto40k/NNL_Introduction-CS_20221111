@@ -21,6 +21,24 @@ void Print(int[] a)
     System.Console.Write($"\nC({a[4]};{a[5]}) "); 
 }
 
+int Scale(int[] a)
+{
+    int i;
+    int scale=2;
+    for (i = 0; i < a.Length-1; i++)
+    {
+        s=a[i]*scale;
+    // a[0]=a[0]*scale;
+    // a[1]=a[1]*scale;
+    // a[2]=a[2]*scale;
+    // a[3]=a[3]*scale;
+    // a[4]=a[4]*scale;
+    // a[5]=a[5]*scale;
+    }
+   
+    return s;
+}
+
 void PrintWithScale(int[] a)
 {
     int s=2;
@@ -32,6 +50,8 @@ void PrintWithScale(int[] a)
 
 int[] m=NotRandomIntArray();
 Print(m);
+System.Console.WriteLine();
+System.Console.WriteLine(Scale(m));
 PrintWithScale(m);
 
 
