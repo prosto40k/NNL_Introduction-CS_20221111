@@ -18,14 +18,11 @@ int[,] Create2DArray(int n=3,int m=3,int min=0, int max=5)
 
 int Change(int[,] a)
 {
-    for(int i=0;i<a.GetLength(0);i++)
+    for(int i=0;i<a.GetLength(0);i=i+2)
     {
-        for(int j=0;j<a.GetLength(1);j++)
+        for(int j=0;j<a.GetLength(1);j=j+2)
         {
-            if (a[i,j]%2==0)
-            {
-                a[i,j]=-a[i,j];
-            }
+           a[i,j]=a[i,j]*a[i,j];
             
         }
                
@@ -48,5 +45,7 @@ void Print2DArray(int[,] a)
 }
 
 int[,] a=Create2DArray();
+Print2DArray(a);
 Change(a);
+System.Console.WriteLine();
 Print2DArray(a);

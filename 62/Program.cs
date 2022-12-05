@@ -49,5 +49,7 @@ void Print2DArray(int[,] a)
 }
 
 int[,] a=Create2DArray();
+Print2DArray(a);
 Change(a);
+System.Console.WriteLine();
 Print2DArray(a);
