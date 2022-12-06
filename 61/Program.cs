@@ -6,7 +6,7 @@ double[,] Create2DArray(int n=6,int m=5,double min=1, double max=5)
     Random random=new Random();
     for(int i=0;i<n;i++)
          for(int j=0;j<m;j++)
-                a[i,j]=random.Next(min,max+1);
+                a[i,j]=random.NextDouble() * 10;
     return a;
 }
 

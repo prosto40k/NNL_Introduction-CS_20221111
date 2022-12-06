@@ -14,33 +14,7 @@ int[,] Create2DArray(int n=4,int m=4,int min=1, int max=5)
          
     return a;
 }
-
-void Swap(ref int a,ref int b)
-{
-    int t=a;
-    a=b;
-    b=t;
-}
-
-void BubbleSort(int[,] a,out int count)
-{
-    count=0;
-    int flag=0;
-    for(int i=0;i<a.GetLength(0);i++)
-    {
-        flag=0;
-        for(int j=0;j<a.GetLength(1)-1-i;j++)
-        {
-            if (a[i,j]>a[i,j+1])
-            {
-              Swap(ref a[i,j],ref a[i,j+1]);
-              flag=1;
-            }
-            count++;
-        }
-        if (flag==0) return;
-    }
-}
+       
     
 void Print2DArray(int[,] a)
 {
@@ -56,15 +30,34 @@ void Print2DArray(int[,] a)
         }
 }
 
+int Align(int [,] a)
+{
+
+for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    for (int k = 0; k < a.GetLength(0); k++)
+                    {
+                        if (a[i, j] > a[i, k])
+                        {
+                            int tmp = a[i,j];
+                            a[i,j] = a[i,k];
+                            a[i,k] = tmp;
+                        }
+                    }
+                }
+            }
+    return 1;        
+}
+
+
 int[,] a=Create2DArray();
 Print2DArray(a);
-
-int count=0;
-BubbleSort(a,out count);
 System.Console.WriteLine();
+ Align(a);
 Print2DArray(a);
-System.Console.WriteLine();
-System.Console.WriteLine(count);
+
 
 
 
