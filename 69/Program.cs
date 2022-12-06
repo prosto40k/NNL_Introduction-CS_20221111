@@ -1,5 +1,5 @@
 ﻿//69. Написать программу, упорядочивания по убыванию элементы каждой строки двумерной массива.
-int[,] Create2DArray(int n=4,int m=4,int min=1, int max=5)
+int[,] Create2DArray(int n=4,int m=4,int min=1, int max=10)
 {
     int[,] a=new int[n,m];
     Random random=new Random();
@@ -14,6 +14,8 @@ int[,] Create2DArray(int n=4,int m=4,int min=1, int max=5)
          
     return a;
 }
+
+
        
     
 void Print2DArray(int[,] a)
@@ -41,14 +43,19 @@ for (int i=0; i<a.GetLength(0); i++)
          {
             if (a[i,j] > a[i,k])
             {
-                int t = a[i,j];
-                a[i,j] = a[i,k];
-                a[i,k] = t;
+                Swap(ref a[i,j], ref a[i,k]);
             }
          }
     }
 }
     return 1;        
+}
+
+void Swap(ref int a,ref int b)
+{
+    int t=a;
+    a=b;
+    b=t;
 }
 
 
