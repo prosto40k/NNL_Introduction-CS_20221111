@@ -30,24 +30,24 @@ void Print2DArray(int[,] a)
         }
 }
 
-int Align(int [,] a)
+int BubbleSort2DArray(int [,] a)
 {
 
-for (int i = 0; i < a.GetLength(0); i++)
+for (int i=0; i<a.GetLength(0); i++)
+{
+    for (int j=0; j<a.GetLength(1); j++)
+    {
+        for (int k=0; k<a.GetLength(0); k++)
+         {
+            if (a[i,j] > a[i,k])
             {
-                for (int j = 0; j < a.GetLength(1); j++)
-                {
-                    for (int k = 0; k < a.GetLength(0); k++)
-                    {
-                        if (a[i, j] > a[i, k])
-                        {
-                            int tmp = a[i,j];
-                            a[i,j] = a[i,k];
-                            a[i,k] = tmp;
-                        }
-                    }
-                }
+                int t = a[i,j];
+                a[i,j] = a[i,k];
+                a[i,k] = t;
             }
+         }
+    }
+}
     return 1;        
 }
 
@@ -55,7 +55,7 @@ for (int i = 0; i < a.GetLength(0); i++)
 int[,] a=Create2DArray();
 Print2DArray(a);
 System.Console.WriteLine();
- Align(a);
+BubbleSort2DArray(a);
 Print2DArray(a);
 
 
