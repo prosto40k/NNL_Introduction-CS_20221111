@@ -1,11 +1,10 @@
 ﻿//70. Показать натуральные числа от 1 до N, N задано
 
-int Num(int n=4,int i=1)
-        {
-           if (n == i)
-                return i;
-            else 
-                return Num(i+i)
-        }
+void Numb (int n=4)
+{
+    if (n == 0 || n<0) return;
+    Numb (n - 1);
+    Console.WriteLine(n);
+}
 
-Num();
+Numb();
