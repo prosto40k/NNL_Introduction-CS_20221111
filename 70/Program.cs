@@ -2,7 +2,7 @@
 
 void Numb (int n=4)
 {
-    if (n == 0 || n<0) return;
+    if (n == 0 || n<0) return ;
     Numb (n - 1);
     Console.WriteLine(n);
 }
