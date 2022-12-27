@@ -1,7 +1,7 @@
 ﻿
 using System.Linq;
 
-char c='a';
+char c='a'; // Символ 
 c='\x0064';
 c='\u0064';
 char b='1';
